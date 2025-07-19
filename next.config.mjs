@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Optimizaciones de rendimiento
+  // Optimizaciones básicas de rendimiento
   compress: true,
   poweredByHeader: false,
   
   // Configuración de imágenes
   images: {
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     unoptimized: true,
   },
 
@@ -29,10 +27,6 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
           },
         ],
       },
@@ -68,12 +62,7 @@ const nextConfig = {
     ]
   },
 
-  // Configuración experimental para mejor rendimiento
-  experimental: {
-    optimizeCss: true,
-  },
-
-  // Configuración para ESLint y TypeScript
+  // Configuración para ESLint y TypeScript (para evitar errores en build)
   eslint: {
     ignoreDuringBuilds: true,
   },
