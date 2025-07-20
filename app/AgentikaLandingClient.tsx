@@ -123,11 +123,11 @@ export default function AgentikaLandingClient() {
                   🚀 Automatización empresarial con IA
                 </Badge>
                 <h1 id="hero-title" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                  Automatización empresarial con{" "}
+                  Hasta un{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                    agentes de IA
+                    95% menos tiempo
                   </span>{" "}
-                  personalizados
+                  en realizar tareas repetitivas
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed">
                   Analizamos tus procesos empresariales y creamos agentes de IA que automatizan tareas repetitivas para
@@ -193,10 +193,10 @@ export default function AgentikaLandingClient() {
         <div className="container mx-auto max-w-6xl w-full">
           <div className="text-center mb-16">
             <h2 id="como-funciona-title" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Cómo funciona nuestra automatización empresarial
+              Cómo funciona nuestro proceso
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Un proceso simple y transparente para implementar agentes de IA en tu empresa
+              Un proceso simple y transparente, diseñado para maximizar tus resultados
             </p>
           </div>
 
@@ -204,31 +204,29 @@ export default function AgentikaLandingClient() {
             {[
               {
                 step: "01",
-                title: "Análisis de procesos",
-                description:
-                  "Analizamos tus procesos empresariales y identificamos oportunidades de automatización con IA",
+                title: "Rellena el formulario",
+                description: "Nos cuentas qué tareas repetitivas consumen más tiempo en tu empresa",
                 icon: FileText,
                 color: "from-blue-500 to-blue-600",
               },
               {
                 step: "02",
-                title: "Diseño de agentes IA",
-                description: "Nuestro equipo diseña agentes de IA personalizados para tu automatización empresarial",
+                title: "Análisis manual",
+                description: "Nuestro equipo analiza tu caso específico de forma personalizada",
                 icon: Target,
                 color: "from-cyan-500 to-cyan-600",
               },
               {
                 step: "03",
-                title: "Propuesta personalizada",
-                description: "Te presentamos agentes de IA específicos para automatizar tus procesos empresariales",
+                title: "Propuesta a medida",
+                description: "Te presentamos agentes de IA diseñados específicamente para tus procesos",
                 icon: Bot,
                 color: "from-blue-600 to-cyan-600",
               },
               {
                 step: "04",
                 title: "Implementación",
-                description:
-                  "Implementamos la automatización empresarial solo si decides continuar con nuestros agentes de IA",
+                description: "Solo pagas si decides implementar alguna de nuestras soluciones",
                 icon: CheckCircle,
                 color: "from-green-500 to-green-600",
               },
@@ -259,55 +257,47 @@ export default function AgentikaLandingClient() {
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Beneficios de la automatización empresarial con IA
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">¿Por qué elegir Agentika?</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Descubre cómo nuestros agentes de IA transforman tu empresa con automatización inteligente
+              Beneficios reales que transforman la forma en que trabajas
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Ahorro de hasta el 95% del tiempo",
-                description:
-                  "La automatización empresarial libera a tu equipo de tareas repetitivas para enfocarse en estrategia",
+                title: "Ahorra hasta el 95% del tiempo",
+                description: "Libera a tu equipo de tareas repetitivas para que se enfoquen en lo importante",
                 icon: Clock,
                 color: "from-blue-500 to-blue-600",
               },
               {
-                title: "Agentes de IA trabajando 24/7",
-                description:
-                  "Nuestros agentes de IA automatizan procesos empresariales sin descanso, incluso fuera del horario laboral",
+                title: "Trabaja las 24 horas",
+                description: "Nuestros agentes automatizan procesos sin descanso, incluso de noche",
                 icon: Zap,
                 color: "from-cyan-500 to-cyan-600",
               },
               {
-                title: "Cero errores en automatización",
-                description:
-                  "Los agentes de IA eliminan errores humanos y garantizan consistencia en la automatización empresarial",
+                title: "Cero errores humanos",
+                description: "Elimina errores y garantiza consistencia en todos tus procesos",
                 icon: Shield,
                 color: "from-green-500 to-green-600",
               },
               {
-                title: "Automatización sin conocimiento técnico",
-                description:
-                  "Implementamos agentes de IA sin que necesites conocimientos técnicos en automatización empresarial",
+                title: "Sin conocimiento técnico",
+                description: "Nosotros nos encargamos de todo, tú solo disfrutas los resultados",
                 icon: Settings,
                 color: "from-purple-500 to-purple-600",
               },
               {
-                title: "Soporte humano especializado",
-                description:
-                  "Nuestro equipo te acompaña en todo el proceso de automatización empresarial con agentes de IA",
+                title: "Soporte humano real",
+                description: "Nuestro equipo te acompaña en todo momento del proceso",
                 icon: HeadphonesIcon,
                 color: "from-orange-500 to-orange-600",
               },
               {
-                title: "Escalabilidad de agentes IA",
-                description:
-                  "La automatización empresarial crece contigo, adaptando los agentes de IA a nuevas necesidades",
+                title: "Crece contigo",
+                description: "La automatización se adapta y escala según las necesidades de tu empresa",
                 icon: TrendingUp,
                 color: "from-indigo-500 to-indigo-600",
               },
