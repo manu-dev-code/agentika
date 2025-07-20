@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Agentika - Automatización Empresarial con IA | Ahorra hasta 95% del Tiempo",
   description:
-    "Automatiza procesos repetitivos con agentes de IA personalizados. Análisis gratuito, solo pagas si implementas. Ahorra hasta 95% del tiempo en tareas operativas.",
+    "Automatiza procesos repetitivos con agentes de IA personalizados. Análisis gratuito, solo pagas si implementas. Ahorra hasta 95% del tiempo.",
   keywords: [
     "automatización empresarial",
     "agentes de IA",
@@ -40,12 +40,13 @@ export const metadata: Metadata = {
     canonical: "/",
     languages: {
       "es-ES": "/",
+      es: "/",
     },
   },
   openGraph: {
     title: "Agentika - Automatización Empresarial con IA | Ahorra hasta 95% del Tiempo",
     description:
-      "Automatiza procesos repetitivos con agentes de IA personalizados. Análisis gratuito, solo pagas si implementas. Ahorra hasta 95% del tiempo en tareas operativas.",
+      "Automatiza procesos repetitivos con agentes de IA personalizados. Análisis gratuito, solo pagas si implementas. Ahorra hasta 95% del tiempo.",
     url: "https://agentika.es",
     siteName: "Agentika",
     locale: "es_ES",
@@ -92,7 +93,7 @@ const jsonLd = {
   description:
     "Empresa especializada en automatización empresarial con agentes de inteligencia artificial personalizados",
   url: "https://agentika.es",
-  logo: "https://agentika.es/logo.png",
+  logo: "https://agentika.es/android-chrome-512x512.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+34-900-123-456",
@@ -174,10 +175,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="manifest" href="/site.webmanifest" />
+        <link rel="alternate" hrefLang="es-ES" href="https://agentika.es/" />
+        <link rel="alternate" hrefLang="es" href="https://agentika.es/" />
+        <link rel="alternate" hrefLang="x-default" href="https://agentika.es/" />
         <meta name="theme-color" content="#3B82F6" />
         <meta name="msapplication-TileColor" content="#3B82F6" />
         <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>

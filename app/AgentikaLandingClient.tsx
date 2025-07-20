@@ -54,10 +54,10 @@ export default function AgentikaLandingClient() {
     }
   }
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 overflow-x-hidden">
       {/* Header */}
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-slate-200 z-50">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 h-16 flex items-center justify-between max-w-full">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <Bot className="w-5 h-5 text-white" />
@@ -114,41 +114,41 @@ export default function AgentikaLandingClient() {
       </header>
 
       {/* Hero Section */}
-      <section id="inicio" className="pt-24 pb-16 px-4" aria-labelledby="hero-title">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <header className="space-y-8">
+      <section id="inicio" className="pt-24 pb-16 px-4 sm:px-6" aria-labelledby="hero-title">
+        <div className="container mx-auto max-w-6xl w-full">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <header className="space-y-6 lg:space-y-8">
               <div className="space-y-4">
-                <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200">
+                <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200 text-xs sm:text-sm">
                   🚀 Automatización empresarial con IA
                 </Badge>
-                <h1 id="hero-title" className="text-4xl lg:text-6xl font-bold text-slate-800 leading-tight">
-                  Hasta un{" "}
+                <h1 id="hero-title" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-800 leading-tight">
+                  Automatización empresarial con{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
-                    95% menos tiempo
+                    agentes de IA
                   </span>{" "}
-                  en realizar tareas repetitivas
+                  personalizados
                 </h1>
                 <p className="text-xl text-slate-600 leading-relaxed">
-                  Analizamos tus procesos y tareas, y te proponemos agentes de IA hechos a medida para automatizar tu
-                  negocio
+                  Analizamos tus procesos empresariales y creamos agentes de IA que automatizan tareas repetitivas para
+                  que ahorres hasta un 95% del tiempo en operaciones diarias
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col gap-3 sm:gap-4 sm:flex-row">
                 <Button
                   size="lg"
                   onClick={() => openModal()}
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg px-8"
+                  className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-base sm:text-lg px-6 sm:px-8 w-full sm:w-auto"
                 >
                   Empieza gratis
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   onClick={() => scrollToSection("casos")}
-                  className="text-lg px-8 border-slate-300 bg-transparent"
+                  className="text-base sm:text-lg px-6 sm:px-8 border-slate-300 bg-transparent w-full sm:w-auto"
                 >
                   Ver casos de éxito
                 </Button>
@@ -166,14 +166,15 @@ export default function AgentikaLandingClient() {
               </div>
             </header>
 
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-3xl p-8 relative overflow-hidden">
+            <div className="relative mt-8 lg:mt-0">
+              <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8 relative overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
-                  alt="Ilustración de agentes de inteligencia artificial colaborando con profesionales para automatizar procesos empresariales"
+                  src="/images/hero-agentika.png"
+                  alt="Automatización empresarial con agentes de IA - Profesionales colaborando con inteligencia artificial para automatizar procesos"
                   width={500}
                   height={400}
-                  className="w-full h-auto rounded-2xl"
+                  className="w-full h-auto rounded-xl sm:rounded-2xl max-w-full"
+                  priority
                 />
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full opacity-20"></div>
                 <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full opacity-20"></div>
@@ -184,44 +185,50 @@ export default function AgentikaLandingClient() {
       </section>
 
       {/* Cómo funciona */}
-      <section id="como-funciona" className="py-16 px-4 bg-white" aria-labelledby="como-funciona-title">
-        <div className="container mx-auto max-w-6xl">
+      <section
+        id="como-funciona"
+        className="py-12 sm:py-16 px-4 sm:px-6 bg-white"
+        aria-labelledby="como-funciona-title"
+      >
+        <div className="container mx-auto max-w-6xl w-full">
           <div className="text-center mb-16">
-            <h2 id="como-funciona-title" className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Cómo funciona nuestro proceso
+            <h2 id="como-funciona-title" className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+              Cómo funciona nuestra automatización empresarial
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Un proceso simple y transparente, diseñado para maximizar tus resultados
+              Un proceso simple y transparente para implementar agentes de IA en tu empresa
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
               {
                 step: "01",
-                title: "Rellena el formulario",
-                description: "Nos cuentas qué tareas repetitivas consumen más tiempo en tu empresa",
+                title: "Análisis de procesos",
+                description:
+                  "Analizamos tus procesos empresariales y identificamos oportunidades de automatización con IA",
                 icon: FileText,
                 color: "from-blue-500 to-blue-600",
               },
               {
                 step: "02",
-                title: "Análisis manual",
-                description: "Nuestro equipo analiza tu caso específico de forma personalizada",
+                title: "Diseño de agentes IA",
+                description: "Nuestro equipo diseña agentes de IA personalizados para tu automatización empresarial",
                 icon: Target,
                 color: "from-cyan-500 to-cyan-600",
               },
               {
                 step: "03",
-                title: "Propuesta a medida",
-                description: "Te presentamos agentes de IA diseñados específicamente para tus procesos",
+                title: "Propuesta personalizada",
+                description: "Te presentamos agentes de IA específicos para automatizar tus procesos empresariales",
                 icon: Bot,
                 color: "from-blue-600 to-cyan-600",
               },
               {
                 step: "04",
                 title: "Implementación",
-                description: "Solo pagas si decides implementar alguna de nuestras soluciones",
+                description:
+                  "Implementamos la automatización empresarial solo si decides continuar con nuestros agentes de IA",
                 icon: CheckCircle,
                 color: "from-green-500 to-green-600",
               },
@@ -252,9 +259,11 @@ export default function AgentikaLandingClient() {
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">¿Por qué elegir Agentika?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+              Beneficios de la automatización empresarial con IA
+            </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Beneficios reales que transformarán la forma en que trabajas
+              Descubre cómo nuestros agentes de IA transforman tu empresa con automatización inteligente
             </p>
           </div>
 
@@ -262,37 +271,43 @@ export default function AgentikaLandingClient() {
             {[
               {
                 title: "Ahorro de hasta el 95% del tiempo",
-                description: "Libera a tu equipo de tareas repetitivas para que se enfoque en lo que realmente importa",
+                description:
+                  "La automatización empresarial libera a tu equipo de tareas repetitivas para enfocarse en estrategia",
                 icon: Clock,
                 color: "from-blue-500 to-blue-600",
               },
               {
-                title: "Procesos automáticos 24/7",
-                description: "Tus agentes trabajan sin descanso, incluso cuando tu equipo no está disponible",
+                title: "Agentes de IA trabajando 24/7",
+                description:
+                  "Nuestros agentes de IA automatizan procesos empresariales sin descanso, incluso fuera del horario laboral",
                 icon: Zap,
                 color: "from-cyan-500 to-cyan-600",
               },
               {
-                title: "Cero errores humanos",
-                description: "Elimina los errores manuales y garantiza la consistencia en todos tus procesos",
+                title: "Cero errores en automatización",
+                description:
+                  "Los agentes de IA eliminan errores humanos y garantizan consistencia en la automatización empresarial",
                 icon: Shield,
                 color: "from-green-500 to-green-600",
               },
               {
-                title: "No necesitas saber de tecnología",
-                description: "Nosotros nos encargamos de todo el aspecto técnico, tú solo disfrutas los resultados",
+                title: "Automatización sin conocimiento técnico",
+                description:
+                  "Implementamos agentes de IA sin que necesites conocimientos técnicos en automatización empresarial",
                 icon: Settings,
                 color: "from-purple-500 to-purple-600",
               },
               {
-                title: "Apoyo humano en todo momento",
-                description: "Nuestro equipo te acompaña durante todo el proceso de implementación",
+                title: "Soporte humano especializado",
+                description:
+                  "Nuestro equipo te acompaña en todo el proceso de automatización empresarial con agentes de IA",
                 icon: HeadphonesIcon,
                 color: "from-orange-500 to-orange-600",
               },
               {
-                title: "Escalabilidad garantizada",
-                description: "Tus agentes crecen contigo, adaptándose a las necesidades de tu empresa",
+                title: "Escalabilidad de agentes IA",
+                description:
+                  "La automatización empresarial crece contigo, adaptando los agentes de IA a nuevas necesidades",
                 icon: TrendingUp,
                 color: "from-indigo-500 to-indigo-600",
               },
@@ -320,36 +335,36 @@ export default function AgentikaLandingClient() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 id="casos-title" className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Casos de uso populares
+              Casos de automatización empresarial con agentes de IA
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Descubre cómo otras empresas están automatizando sus procesos
+              Ejemplos reales de cómo empresas implementan automatización con nuestros agentes de IA
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Seguimiento automático de leads",
-                description: "Nurturing personalizado y seguimiento constante de prospectos",
+                title: "Automatización de seguimiento de leads",
+                description: "Agentes de IA para automatización de nurturing personalizado y seguimiento constante",
                 icon: Users,
                 color: "from-blue-500 to-blue-600",
               },
               {
-                title: "Envío de emails personalizados",
-                description: "Comunicación automatizada adaptada a cada cliente",
+                title: "Automatización de emails empresariales",
+                description: "Agentes de IA que automatizan comunicación personalizada adaptada a cada cliente",
                 icon: Mail,
                 color: "from-cyan-500 to-cyan-600",
               },
               {
-                title: "Integración entre herramientas",
-                description: "Conecta tu CRM, ERP y otras plataformas sin esfuerzo",
+                title: "Automatización de integraciones",
+                description: "Agentes de IA para automatización empresarial entre CRM, ERP y otras plataformas",
                 icon: Settings,
                 color: "from-purple-500 to-purple-600",
               },
               {
-                title: "Creación automática de informes",
-                description: "Reportes detallados generados automáticamente",
+                title: "Automatización de informes",
+                description: "Agentes de IA que automatizan la creación de reportes empresariales detallados",
                 icon: BarChart3,
                 color: "from-green-500 to-green-600",
               },
@@ -379,8 +394,12 @@ export default function AgentikaLandingClient() {
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Empresas que confían en nosotros</h2>
-            <p className="text-xl text-slate-600 mb-8">Más de 150 procesos automatizados con éxito</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+              Empresas que confían en nuestra automatización empresarial
+            </h2>
+            <p className="text-xl text-slate-600 mb-8">
+              Más de 150 procesos automatizados con agentes de IA implementados con éxito
+            </p>
           </div>
 
           {/* Logos ficticios */}
@@ -389,7 +408,7 @@ export default function AgentikaLandingClient() {
               <div key={i} className="flex items-center justify-center">
                 <Image
                   src={`/placeholder.svg?height=60&width=120&query=company logo ${i}`}
-                  alt={`Logo empresa ${i}`}
+                  alt={`Empresa que usa automatización empresarial con agentes de IA ${i}`}
                   width={120}
                   height={60}
                   className="grayscale hover:grayscale-0 transition-all duration-300"
@@ -406,7 +425,7 @@ export default function AgentikaLandingClient() {
                 role: "Directora de Operaciones",
                 company: "TechSolutions",
                 content:
-                  "Agentika nos ayudó a automatizar nuestro proceso de seguimiento de clientes. Ahora ahorramos 15 horas semanales que dedicamos a estrategia.",
+                  "La automatización empresarial de Agentika transformó nuestros procesos. Los agentes de IA nos ahorran 15 horas semanales que dedicamos a estrategia.",
                 rating: 5,
               },
               {
@@ -414,7 +433,7 @@ export default function AgentikaLandingClient() {
                 role: "CEO",
                 company: "InnovateCorp",
                 content:
-                  "El análisis gratuito nos convenció inmediatamente. La implementación fue perfecta y los resultados superaron nuestras expectativas.",
+                  "El análisis gratuito de automatización empresarial nos convenció. Los agentes de IA superaron nuestras expectativas completamente.",
                 rating: 5,
               },
               {
@@ -422,7 +441,7 @@ export default function AgentikaLandingClient() {
                 role: "Gerente de Marketing",
                 company: "GrowthLab",
                 content:
-                  "Nuestras campañas de email marketing ahora se ejecutan solas. La personalización automática ha mejorado nuestras conversiones un 40%.",
+                  "Nuestros agentes de IA automatizan campañas de email marketing. La automatización empresarial mejoró conversiones un 40%.",
                 rating: 5,
               },
             ].map((testimonial, index) => (
@@ -463,24 +482,28 @@ export default function AgentikaLandingClient() {
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">Seguridad y transparencia</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
+              Seguridad en automatización empresarial
+            </h2>
+            <p className="text-xl text-slate-600">Nuestros agentes de IA garantizan máxima seguridad y transparencia</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Protección de datos",
-                description: "Cumplimos con las mejores prácticas de seguridad",
+                title: "Protección de datos empresariales",
+                description:
+                  "Automatización empresarial con agentes de IA que cumplen las mejores prácticas de seguridad",
                 icon: Lock,
               },
               {
-                title: "Sin permanencias",
-                description: "Puedes desactivar cualquier agente cuando lo desees",
+                title: "Automatización sin permanencias",
+                description: "Puedes desactivar cualquier agente de IA de automatización empresarial cuando desees",
                 icon: Shield,
               },
               {
-                title: "Soporte personalizado",
-                description: "Atención humana especializada en todo momento",
+                title: "Soporte especializado en IA",
+                description: "Atención humana especializada en automatización empresarial con agentes de IA",
                 icon: Award,
               },
             ].map((item, index) => (
@@ -505,9 +528,9 @@ export default function AgentikaLandingClient() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 id="precios-title" className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Precios transparentes
+              Precios de automatización empresarial
             </h2>
-            <p className="text-xl text-slate-600">Sin sorpresas, sin letra pequeña</p>
+            <p className="text-xl text-slate-600">Análisis gratuito de agentes de IA, sin sorpresas ni letra pequeña</p>
           </div>
 
           <Card className="border-0 shadow-xl max-w-2xl mx-auto">
@@ -515,20 +538,22 @@ export default function AgentikaLandingClient() {
               <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center">
                 <CheckCircle className="w-10 h-10 text-white" />
               </div>
-              <CardTitle className="text-2xl text-slate-800 mb-4">Análisis totalmente gratuito</CardTitle>
+              <CardTitle className="text-2xl text-slate-800 mb-4">
+                Análisis de automatización empresarial gratuito
+              </CardTitle>
               <CardDescription className="text-lg text-slate-600">
-                Solo pagas si implementas un agente hecho para ti
+                Solo pagas si implementas agentes de IA para tu automatización empresarial
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
                 {[
-                  "Análisis completo de tus procesos - GRATIS",
-                  "Propuesta personalizada de agentes - GRATIS",
-                  "Consultoría inicial sin compromiso - GRATIS",
-                  "Solo pagas si decides implementar",
-                  "Cada solución es única, adaptada a tus necesidades",
-                  "Soporte continuo incluido",
+                  "Análisis completo de automatización empresarial - GRATIS",
+                  "Propuesta personalizada de agentes de IA - GRATIS",
+                  "Consultoría inicial de automatización - GRATIS",
+                  "Solo pagas si decides implementar agentes de IA",
+                  "Cada automatización empresarial es única y personalizada",
+                  "Soporte continuo para agentes de IA incluido",
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -543,11 +568,11 @@ export default function AgentikaLandingClient() {
                   onClick={() => openModal()}
                   className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg"
                 >
-                  Solicitar análisis gratuito
+                  Solicitar análisis de automatización gratuito
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <p className="text-center text-sm text-slate-500 mt-4">
-                  * Agenda una llamada para conocer tu presupuesto personalizado
+                  * Agenda una llamada para conocer tu presupuesto de automatización empresarial personalizado
                 </p>
               </div>
             </CardContent>
@@ -560,37 +585,39 @@ export default function AgentikaLandingClient() {
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
             <h2 id="faq-title" className="text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
-              Preguntas frecuentes
+              Preguntas sobre automatización empresarial con IA
             </h2>
-            <p className="text-xl text-slate-600">Resolvemos tus dudas más comunes</p>
+            <p className="text-xl text-slate-600">
+              Resolvemos dudas comunes sobre agentes de IA y automatización empresarial
+            </p>
           </div>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-4 w-full">
             {[
               {
-                question: "¿Qué es un agente de IA?",
+                question: "¿Qué es un agente de IA para automatización empresarial?",
                 answer:
-                  "Un agente de IA es un programa inteligente que puede realizar tareas específicas de forma autónoma. En Agentika, creamos agentes personalizados que se integran con tus herramientas existentes para automatizar procesos repetitivos como envío de emails, seguimiento de leads, generación de informes, etc.",
+                  "Un agente de IA es un programa inteligente que automatiza tareas específicas de forma autónoma. En Agentika, creamos agentes de IA personalizados para automatización empresarial que se integran con tus herramientas existentes para automatizar procesos repetitivos como envío de emails, seguimiento de leads, generación de informes, etc.",
               },
               {
-                question: "¿Qué tipo de tareas se pueden automatizar?",
+                question: "¿Qué procesos empresariales se pueden automatizar con agentes de IA?",
                 answer:
-                  "Podemos automatizar prácticamente cualquier tarea repetitiva: seguimiento de clientes, envío de emails personalizados, creación de informes, integración entre sistemas, procesamiento de datos, gestión de inventarios, y mucho más. Durante el análisis gratuito identificamos las mejores oportunidades en tu caso específico.",
+                  "Podemos automatizar prácticamente cualquier proceso empresarial repetitivo: seguimiento de clientes, envío de emails personalizados, creación de informes, integración entre sistemas, procesamiento de datos, gestión de inventarios, y mucho más. Durante el análisis gratuito de automatización empresarial identificamos las mejores oportunidades para implementar agentes de IA en tu caso específico.",
               },
               {
-                question: "¿Cuánto tarda el análisis?",
+                question: "¿Cuánto tarda el análisis de automatización empresarial?",
                 answer:
-                  "El análisis inicial toma entre 3-5 días hábiles. Primero completás un formulario detallado sobre tus procesos, luego nuestro equipo analiza tu caso manualmente y te presenta una propuesta personalizada con los agentes recomendados y sus beneficios estimados.",
+                  "El análisis inicial de automatización empresarial toma entre 3-5 días hábiles. Primero completás un formulario detallado sobre tus procesos empresariales, luego nuestro equipo analiza tu caso manualmente y te presenta una propuesta personalizada con los agentes de IA recomendados y sus beneficios estimados para la automatización.",
               },
               {
-                question: "¿Y si no quiero pagar nada?",
+                question: "¿Y si no quiero pagar por la automatización empresarial?",
                 answer:
-                  "¡Perfecto! El análisis es completamente gratuito y sin compromiso. Recibirás un informe detallado con recomendaciones que puedes implementar por tu cuenta si lo deseas. Solo cobramos si decides que implementemos alguno de los agentes propuestos.",
+                  "¡Perfecto! El análisis de automatización empresarial es completamente gratuito y sin compromiso. Recibirás un informe detallado con recomendaciones sobre agentes de IA que puedes implementar por tu cuenta si lo deseas. Solo cobramos si decides que implementemos alguno de los agentes de IA propuestos para tu automatización empresarial.",
               },
               {
-                question: "¿Puedo desactivar un agente cuando quiera?",
+                question: "¿Puedo desactivar los agentes de IA cuando quiera?",
                 answer:
-                  "Absolutamente. No hay permanencias ni contratos a largo plazo. Puedes pausar o desactivar cualquier agente en cualquier momento. Nuestro objetivo es que obtengas valor real, no retenerte por obligación.",
+                  "Absolutamente. No hay permanencias ni contratos a largo plazo para la automatización empresarial. Puedes pausar o desactivar cualquier agente de IA en cualquier momento. Nuestro objetivo es que obtengas valor real de la automatización empresarial, no retenerte por obligación.",
               },
             ].map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-lg px-6">
@@ -608,10 +635,11 @@ export default function AgentikaLandingClient() {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-600 to-cyan-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-            Solicita tu análisis gratuito y descubre cuánto puedes ahorrar
+            Solicita tu análisis gratuito de automatización empresarial con agentes de IA
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Miles de horas recuperadas, cero errores, máxima eficiencia. Todo empieza con una conversación.
+            Miles de horas recuperadas con automatización empresarial, cero errores, máxima eficiencia. Todo empieza con
+            una conversación sobre agentes de IA.
           </p>
 
           <div className="space-y-4">
@@ -625,20 +653,21 @@ export default function AgentikaLandingClient() {
               }
               className="bg-white text-blue-600 hover:bg-slate-100 text-lg px-12 py-4"
             >
-              Quiero automatizar tareas en mi empresa
+              Quiero automatización empresarial con agentes de IA
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <p className="text-sm opacity-75">
-              ⚡ Respuesta en menos de 24 horas • 🎯 Análisis 100% personalizado • 💰 Sin costo inicial
+              ⚡ Respuesta en menos de 24 horas • 🎯 Análisis de automatización 100% personalizado • 💰 Sin costo
+              inicial
             </p>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer id="contacto" className="bg-slate-900 text-white py-16 px-4" role="contentinfo">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <footer id="contacto" className="bg-slate-900 text-white py-12 sm:py-16 px-4 sm:px-6" role="contentinfo">
+        <div className="container mx-auto max-w-6xl w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -656,10 +685,10 @@ export default function AgentikaLandingClient() {
                   Sobre nosotros
                 </Link>
                 <Link href="#" className="block hover:text-white transition-colors">
-                  Casos de éxito
+                  Casos de automatización
                 </Link>
                 <Link href="#" className="block hover:text-white transition-colors">
-                  Blog
+                  Blog de agentes IA
                 </Link>
                 <Link href="#" className="block hover:text-white transition-colors">
                   Carreras
