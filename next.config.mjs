@@ -3,7 +3,7 @@ const nextConfig = {
   // Optimizaciones básicas de rendimiento
   compress: true,
   poweredByHeader: false,
-  
+
   // Configuración de imágenes
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -62,10 +62,7 @@ const nextConfig = {
     ]
   },
 
-  // Configuración para ESLint y TypeScript (para evitar errores en build)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Configuración para TypeScript (para evitar errores en build)
   typescript: {
     ignoreBuildErrors: true,
   },
