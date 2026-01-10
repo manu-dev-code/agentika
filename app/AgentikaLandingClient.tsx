@@ -721,7 +721,7 @@ export default function AgentikaLandingClient() {
           </div>
 
           <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">© 2025 Agentika. Todos los derechos reservados.</p>
+            <p className="text-slate-400 text-sm">© {new Date().getFullYear()} Agentika. Todos los derechos reservados.</p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <Link href="#" className="text-slate-400 hover:text-white transition-colors">
                 <MessageSquare className="w-5 h-5" />
