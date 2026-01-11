@@ -380,7 +380,7 @@ export default function AgentikaLandingClient() {
         </div>
       </section>
 
-      {/* Prueba social */}
+      {/* Prueba social - Ocultada temporalmente hasta tener casos reales
       <section className="py-16 px-4 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
@@ -392,7 +392,6 @@ export default function AgentikaLandingClient() {
             </p>
           </div>
 
-          {/* Logos ficticios */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 opacity-60">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="flex items-center justify-center">
@@ -407,7 +406,6 @@ export default function AgentikaLandingClient() {
             ))}
           </div>
 
-          {/* Testimonials */}
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -467,6 +465,7 @@ export default function AgentikaLandingClient() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Seguridad */}
       <section className="py-16 px-4 bg-white">
@@ -597,7 +596,7 @@ export default function AgentikaLandingClient() {
               {
                 question: "¿Cuánto tarda el análisis de automatización empresarial?",
                 answer:
-                  "El análisis inicial de automatización empresarial toma entre 3-5 días hábiles. Primero completás un formulario detallado sobre tus procesos empresariales, luego nuestro equipo analiza tu caso manualmente y te presenta una propuesta personalizada con los agentes de IA recomendados y sus beneficios estimados para la automatización.",
+                  "El análisis inicial de automatización empresarial toma entre 3-5 días hábiles. Primero completas un formulario detallado sobre tus procesos empresariales, luego nuestro equipo analiza tu caso manualmente y te presenta una propuesta personalizada con los agentes de IA recomendados y sus beneficios estimados para la automatización.",
               },
               {
                 question: "¿Y si no quiero pagar por la automatización empresarial?",

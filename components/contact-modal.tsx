@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Send, CheckCircle } from "lucide-react"
+import { Send, CheckCircle, Sparkles, X } from "lucide-react"
 import { sendContactEmail } from "@/app/actions"
 import { toast } from "sonner"
 
@@ -82,16 +82,23 @@ export function ContactModal({
   if (isSubmitted) {
     return (
       <Dialog open={isOpen} onOpenChange={onClose}>
-        <DialogContent className="sm:max-w-md">
-          <div className="text-center py-8">
-            <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
-              <CheckCircle className="w-8 h-8 text-white" />
+        <DialogContent className="sm:max-w-md border-none bg-white/80 backdrop-blur-xl shadow-[0_20px_50px_rgba(37,99,235,0.15)] overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-500 animate-gradient-x" />
+          <div className="text-center py-12 px-2 relative">
+            <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30 scale-110">
+              <CheckCircle className="w-12 h-12 text-white animate-in zoom-in duration-500" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-2">¡Solicitud enviada!</h3>
-            <p className="text-slate-600 mb-4">
-              Hemos recibido tu información. Nuestro equipo se pondrá en contacto contigo en las próximas 24 horas.
+            <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-3">
+              ¡Solicitud recibida!
+            </h3>
+            <p className="text-slate-600 text-lg mb-6 leading-relaxed">
+              Tu camino hacia la <span className="font-semibold text-blue-600">automatización</span> ha comenzado.
+              Nuestro equipo analizará tu caso y te contactará en menos de 24h.
             </p>
-            <p className="text-sm text-slate-500">Esta ventana se cerrará automáticamente...</p>
+            <div className="flex items-center justify-center gap-2 text-sm font-medium text-slate-400">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              <span>Preparando tu análisis estratégico...</span>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
@@ -100,126 +107,150 @@ export function ContactModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-slate-800">{title}</DialogTitle>
-          <DialogDescription className="text-slate-600">{description}</DialogDescription>
-        </DialogHeader>
+      <DialogContent className="sm:max-w-xl max-h-[96vh] overflow-hidden border-none bg-white/95 backdrop-blur-2xl shadow-[0_40px_100px_rgba(37,99,235,0.2)] p-0 flex flex-col rounded-3xl">
+        {/* Header - Impactant & High Energy */}
+        <div className="bg-gradient-to-br from-[#1e40af] via-[#2563eb] to-[#0891b2] p-8 text-white relative overflow-hidden shrink-0 border-b border-white/10">
+          <div className="relative z-10 flex items-start gap-4">
+            <div className="bg-white/15 p-3.5 rounded-2xl backdrop-blur-md border border-white/20 shrink-0 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+              <Sparkles className="w-7 h-7 text-cyan-200 animate-pulse" />
+            </div>
+            <div>
+              <DialogTitle className="text-2xl font-black tracking-tight leading-tight mb-1.5 text-white">
+                {title}
+              </DialogTitle>
+              <DialogDescription className="text-blue-50/90 text-sm leading-relaxed max-w-sm font-medium">
+                Libera el potencial de tu empresa con <span className="text-cyan-200 font-extrabold underline decoration-cyan-400/30 underline-offset-4">Agentes de IA</span> de próxima generación.
+              </DialogDescription>
+            </div>
+          </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6 mt-6">
-          <div className="grid md:grid-cols-2 gap-4">
+          {/* Decorative light effects */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-400/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-[80px]" />
+          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-[50px]" />
+        </div>
+
+        <div className="p-8 overflow-y-auto">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid grid-cols-2 gap-5">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Nombre completo
+                </Label>
+                <Input
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => handleChange("name", e.target.value)}
+                  placeholder="Tu nombre"
+                  required
+                  className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Email corporativo
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
+                  placeholder="tu@empresa.com"
+                  required
+                  className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-5">
+              <div className="space-y-2">
+                <Label htmlFor="company" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Empresa
+                </Label>
+                <Input
+                  id="company"
+                  value={formData.company}
+                  onChange={(e) => handleChange("company", e.target.value)}
+                  placeholder="Nombre legal"
+                  required
+                  className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
+                />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="role" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2 opacity-70">
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> Cargo
+                </Label>
+                <Input
+                  id="role"
+                  value={formData.role}
+                  onChange={(e) => handleChange("role", e.target.value)}
+                  placeholder="Ej: Director"
+                  className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
+                />
+              </div>
+            </div>
+
             <div className="space-y-2">
-              <Label htmlFor="name">Nombre completo *</Label>
-              <Input
-                id="name"
-                value={formData.name}
-                onChange={(e) => handleChange("name", e.target.value)}
-                placeholder="Tu nombre"
+              <Label htmlFor="employees" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2 opacity-70">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> Tamaño de la empresa
+              </Label>
+              <Select value={formData.employees} onValueChange={(value) => handleChange("employees", value)}>
+                <SelectTrigger className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white">
+                  <SelectValue placeholder="Seleccionar volumen de empleados" />
+                </SelectTrigger>
+                <SelectContent className="rounded-2xl border-slate-100 shadow-2xl p-1">
+                  <SelectItem value="1-10" className="rounded-xl">1-10 empleados</SelectItem>
+                  <SelectItem value="11-50" className="rounded-xl">11-50 empleados</SelectItem>
+                  <SelectItem value="51-200" className="rounded-xl">51-200 empleados</SelectItem>
+                  <SelectItem value="201-500" className="rounded-xl">201-500 empleados</SelectItem>
+                  <SelectItem value="500+" className="rounded-xl">Más de 500 empleados</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="processes" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> ¿Qué deseas automatizar?
+              </Label>
+              <Textarea
+                id="processes"
+                value={formData.processes}
+                onChange={(e) => handleChange("processes", e.target.value)}
+                placeholder="Explica qué tareas críticas te gustaría que gestionara un Agente de IA..."
+                rows={2}
                 required
+                className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 text-sm px-4 py-3 rounded-2xl transition-all shadow-sm focus:bg-white resize-none min-h-[80px]"
               />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">Email corporativo *</Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => handleChange("email", e.target.value)}
-                placeholder="tu@empresa.com"
-                required
-              />
+
+            <div className="flex gap-4 pt-3">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex-[3] h-14 text-base font-black bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 hover:shadow-[0_10px_40px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl text-white tracking-widest"
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center gap-3">
+                    <div className="w-5 h-5 border-3 border-white/30 border-t-white rounded-full animate-spin" />
+                    Procesando...
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-3">
+                    <Send className="w-5 h-5 shadow-sm" />
+                    Enviar solicitud
+                  </div>
+                )}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={onClose}
+                className="flex-[1] h-14 text-sm font-bold border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-2xl transition-all"
+              >
+                Cerrar
+              </Button>
             </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="company">Empresa *</Label>
-              <Input
-                id="company"
-                value={formData.company}
-                onChange={(e) => handleChange("company", e.target.value)}
-                placeholder="Nombre de tu empresa"
-                required
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="role">Tu cargo</Label>
-              <Input
-                id="role"
-                value={formData.role}
-                onChange={(e) => handleChange("role", e.target.value)}
-                placeholder="CEO, Director, Gerente..."
-              />
-            </div>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="employees">Tamaño de la empresa</Label>
-            <Select value={formData.employees} onValueChange={(value) => handleChange("employees", value)}>
-              <SelectTrigger>
-                <SelectValue placeholder="Selecciona el número de empleados" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="1-10">1-10 empleados</SelectItem>
-                <SelectItem value="11-50">11-50 empleados</SelectItem>
-                <SelectItem value="51-200">51-200 empleados</SelectItem>
-                <SelectItem value="201-500">201-500 empleados</SelectItem>
-                <SelectItem value="500+">Más de 500 empleados</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="processes">¿Qué procesos te gustaría automatizar? *</Label>
-            <Textarea
-              id="processes"
-              value={formData.processes}
-              onChange={(e) => handleChange("processes", e.target.value)}
-              placeholder="Describe las tareas repetitivas que más tiempo te consumen: seguimiento de clientes, envío de emails, creación de informes, etc."
-              rows={3}
-              required
-            />
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="message">Información adicional</Label>
-            <Textarea
-              id="message"
-              value={formData.message}
-              onChange={(e) => handleChange("message", e.target.value)}
-              placeholder="Cuéntanos más sobre tu empresa, herramientas que usas, objetivos específicos..."
-              rows={3}
-            />
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3 pt-4">
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                  Enviando...
-                </>
-              ) : (
-                <>
-                  <Send className="w-4 h-4 mr-2" />
-                  Solicitar análisis gratuito
-                </>
-              )}
-            </Button>
-            <Button type="button" variant="outline" onClick={onClose} className="sm:w-auto bg-transparent">
-              Cancelar
-            </Button>
-          </div>
-
-          <p className="text-xs text-slate-500 text-center">
-            Al enviar este formulario, aceptas que nos pongamos en contacto contigo para ofrecerte nuestros servicios.
-            No compartimos tu información con terceros.
-          </p>
-        </form>
+          </form>
+        </div>
       </DialogContent>
     </Dialog>
   )
