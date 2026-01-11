@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { Toaster } from "sonner"
+
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -83,7 +85,7 @@ export const metadata: Metadata = {
     google: "google-site-verification-code",
     yandex: "yandex-verification-code",
   },
-    generator: 'v0.dev'
+  generator: 'v0.dev'
 }
 
 const jsonLd = {
@@ -186,6 +188,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
+          <Toaster position="top-right" richColors />
         </ThemeProvider>
       </body>
     </html>

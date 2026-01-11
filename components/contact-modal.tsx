@@ -10,6 +10,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Send, CheckCircle } from "lucide-react"
+import { sendContactEmail } from "@/app/actions"
+import { toast } from "sonner"
+
 
 interface ContactModalProps {
   isOpen: boolean
@@ -40,26 +43,36 @@ export function ContactModal({
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simular envío del formulario
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const result = await sendContactEmail(formData)
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+      if (result.success) {
+        setIsSubmitting(false)
+        setIsSubmitted(true)
 
-    // Cerrar modal después de 3 segundos
-    setTimeout(() => {
-      setIsSubmitted(false)
-      onClose()
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        role: "",
-        employees: "",
-        processes: "",
-        message: "",
-      })
-    }, 3000)
+        // Cerrar modal después de 3 segundos
+        setTimeout(() => {
+          setIsSubmitted(false)
+          onClose()
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            role: "",
+            employees: "",
+            processes: "",
+            message: "",
+          })
+        }, 3000)
+      } else {
+        setIsSubmitting(false)
+        toast.error("Error al enviar: " + result.error)
+      }
+    } catch (error) {
+      setIsSubmitting(false)
+      toast.error("Ocurrió un error inesperado. Por favor, inténtalo de nuevo.")
+      console.error(error)
+    }
   }
 
   const handleChange = (field: string, value: string) => {
