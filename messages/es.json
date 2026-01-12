@@ -1,0 +1,283 @@
+{
+    "Index": {
+        "title": "Bienvenido"
+    },
+    "Metadata": {
+        "title": "Agentika - Automatización Empresarial con IA | Ahorra hasta 95% del Tiempo",
+        "description": "Automatiza procesos repetitivos con agentes de IA personalizados. Análisis gratuito, solo pagas si implementas. Ahorra hasta 95% del tiempo.",
+        "keywords": "automatización empresarial, agentes de IA, inteligencia artificial, automatización procesos, ahorro tiempo, productividad empresarial, IA personalizada, automatización tareas, agentes inteligentes, optimización procesos, eficiencia empresarial, automatización España, IA para empresas, robots de proceso, automatización workflow"
+    },
+    "Header": {
+        "nav": {
+            "home": "Inicio",
+            "how_it_works": "Cómo funciona",
+            "cases": "Casos",
+            "pricing": "Precios",
+            "faq": "FAQ",
+            "contact": "Contacto"
+        },
+        "cta": "Solicita un análisis gratuito"
+    },
+    "Hero": {
+        "badge": "🚀 Automatización empresarial con IA",
+        "title_prefix": "Hasta un",
+        "title_highlight": "95% menos tiempo",
+        "title_suffix": "en realizar tareas repetitivas",
+        "description": "Analizamos tus procesos empresariales y creamos agentes de IA que automatizan tareas repetitivas para que ahorres hasta un 95% del tiempo en operaciones diarias",
+        "cta_primary": "Empieza gratis",
+        "cta_secondary": "Ver casos de éxito",
+        "check_1": "Análisis 100% gratuito",
+        "check_2": "Solo pagas si implementas"
+    },
+    "HowItWorks": {
+        "title": "Cómo funciona nuestro proceso",
+        "description": "Un proceso simple y transparente, diseñado para maximizar tus resultados",
+        "steps": {
+            "0": {
+                "step": "01",
+                "title": "Rellena el formulario",
+                "description": "Nos cuentas qué tareas repetitivas consumen más tiempo en tu empresa"
+            },
+            "1": {
+                "step": "02",
+                "title": "Análisis manual",
+                "description": "Nuestro equipo analiza tu caso específico de forma personalizada"
+            },
+            "2": {
+                "step": "03",
+                "title": "Propuesta a medida",
+                "description": "Te presentamos agentes de IA diseñados específicamente para tus procesos"
+            },
+            "3": {
+                "step": "04",
+                "title": "Implementación",
+                "description": "Solo pagas si decides implementar alguna de nuestras soluciones"
+            }
+        }
+    },
+    "Benefits": {
+        "title": "¿Por qué elegir Agentika?",
+        "description": "Beneficios reales que transforman la forma en que trabajas",
+        "items": {
+            "0": {
+                "title": "Ahorra hasta el 95% del tiempo",
+                "description": "Libera a tu equipo de tareas repetitivas para que se enfoquen en lo importante"
+            },
+            "1": {
+                "title": "Trabaja las 24 horas",
+                "description": "Nuestros agentes automatizan procesos sin descanso, incluso de noche"
+            },
+            "2": {
+                "title": "Cero errores humanos",
+                "description": "Elimina errores y garantiza consistencia en todos tus procesos"
+            },
+            "3": {
+                "title": "Sin conocimiento técnico",
+                "description": "Nosotros nos encargamos de todo, tú solo disfrutas los resultados"
+            },
+            "4": {
+                "title": "Soporte humano real",
+                "description": "Nuestro equipo te acompaña en todo momento del proceso"
+            },
+            "5": {
+                "title": "Crece contigo",
+                "description": "La automatización se adapta y escala según las necesidades de tu empresa"
+            }
+        }
+    },
+    "Cases": {
+        "title": "Casos de automatización empresarial con agentes de IA",
+        "description": "Ejemplos reales de cómo empresas implementan automatización con nuestros agentes de IA",
+        "items": {
+            "0": {
+                "title": "Automatización de seguimiento de leads",
+                "description": "Agentes de IA para automatización de nurturing personalizado y seguimiento constante"
+            },
+            "1": {
+                "title": "Automatización de emails empresariales",
+                "description": "Agentes de IA que automatizan comunicación personalizada adaptada a cada cliente"
+            },
+            "2": {
+                "title": "Automatización de integraciones",
+                "description": "Agentes de IA para automatización empresarial entre CRM, ERP y otras plataformas"
+            },
+            "3": {
+                "title": "Automatización de informes",
+                "description": "Agentes de IA que automatizan la creación de reportes empresariales detallados"
+            }
+        }
+    },
+    "Security": {
+        "title": "Seguridad en automatización empresarial",
+        "description": "Nuestros agentes de IA garantizan máxima seguridad y transparencia",
+        "items": {
+            "0": {
+                "title": "Protección de datos empresariales",
+                "description": "Automatización empresarial con agentes de IA que cumplen las mejores prácticas de seguridad"
+            },
+            "1": {
+                "title": "Automatización sin permanencias",
+                "description": "Puedes desactivar cualquier agente de IA de automatización empresarial cuando desees"
+            },
+            "2": {
+                "title": "Soporte especializado en IA",
+                "description": "Atención humana especializada en automatización empresarial con agentes de IA"
+            }
+        }
+    },
+    "Pricing": {
+        "title": "Precios de automatización empresarial",
+        "description": "Análisis gratuito de agentes de IA, sin sorpresas ni letra pequeña",
+        "card": {
+            "title": "Análisis de automatización empresarial gratuito",
+            "description": "Solo pagas si implementas agentes de IA para tu automatización empresarial",
+            "features": [
+                "Análisis completo de automatización empresarial - GRATIS",
+                "Propuesta personalizada de agentes de IA - GRATIS",
+                "Consultoría inicial de automatización - GRATIS",
+                "Solo pagas si decides implementar agentes de IA",
+                "Cada automatización empresarial es única y personalizada",
+                "Soporte continuo para agentes de IA incluido"
+            ],
+            "cta": "Solicitar análisis de automatización gratuito",
+            "note": "* Agenda una llamada para conocer tu presupuesto de automatización empresarial personalizado"
+        }
+    },
+    "FAQ": {
+        "title": "Preguntas sobre automatización empresarial con IA",
+        "description": "Resolvemos dudas comunes sobre agentes de IA y automatización empresarial",
+        "items": {
+            "0": {
+                "question": "¿Qué es un agente de IA para automatización empresarial?",
+                "answer": "Un agente de IA es un programa inteligente que automatiza tareas específicas de forma autónoma. En Agentika, creamos agentes de IA personalizados para automatización empresarial que se integran con tus herramientas existentes para automatizar procesos repetitivos como envío de emails, seguimiento de leads, generación de informes, etc."
+            },
+            "1": {
+                "question": "¿Qué procesos empresariales se pueden automatizar con agentes de IA?",
+                "answer": "Podemos automatizar prácticamente cualquier proceso empresarial repetitivo: seguimiento de clientes, envío de emails personalizados, creación de informes, integración entre sistemas, procesamiento de datos, gestión de inventarios, y mucho más. Durante el análisis gratuito de automatización empresarial identificamos las mejores oportunidades para implementar agentes de IA en tu caso específico."
+            },
+            "2": {
+                "question": "¿Cuánto tarda el análisis de automatización empresarial?",
+                "answer": "El análisis inicial de automatización empresarial toma entre 3-5 días hábiles. Primero completas un formulario detallado sobre tus procesos empresariales, luego nuestro equipo analiza tu caso manualmente y te presenta una propuesta personalizada con los agentes de IA recomendados y sus beneficios estimados para la automatización."
+            },
+            "3": {
+                "question": "¿Y si no quiero pagar por la automatización empresarial?",
+                "answer": "¡Perfecto! El análisis de automatización empresarial es completamente gratuito y sin compromiso. Recibirás un informe detallado con recomendaciones sobre agentes de IA que puedes implementar por tu cuenta si lo deseas. Solo cobramos si decides que implementemos alguno de los agentes de IA propuestos para tu automatización empresarial."
+            },
+            "4": {
+                "question": "¿Puedo desactivar los agentes de IA cuando quiera?",
+                "answer": "Absolutamente. No hay permanencias ni contratos a largo plazo para la automatización empresarial. Puedes pausar o desactivar cualquier agente de IA en cualquier momento. Nuestro objetivo es que obtengas valor real de la automatización empresarial, no retenerte por obligación."
+            }
+        }
+    },
+    "Footer": {
+        "subtitle": "Automatización empresarial con agentes de IA personalizados",
+        "company": {
+            "title": "Empresa",
+            "about": "Sobre nosotros",
+            "cases": "Casos de automatización",
+            "blog": "Blog de agentes IA",
+            "careers": "Carreras"
+        },
+        "legal": {
+            "title": "Legal",
+            "terms": "Términos de servicio",
+            "privacy": "Política de privacidad",
+            "cookies": "Cookies"
+        },
+        "contact": {
+            "title": "Contacto",
+            "address": "Elche, España"
+        },
+        "rights": "© 2025 Agentika. Todos los derechos reservados."
+    },
+    "CTA": {
+        "title": "Solicita tu análisis gratuito de automatización empresarial con agentes de IA",
+        "description": "Miles de horas recuperadas con automatización empresarial, cero errores, máxima eficiencia. Todo empieza con una conversación sobre agentes de IA.",
+        "button": "Quiero automatización empresarial con agentes de IA",
+        "note": "⚡ Respuesta rápidas • 🎯 Análisis de automatización 100% personalizado • 💰 Sin costo inicial"
+    },
+    "Modal": {
+        "contact_title": "Contacta con nosotros",
+        "contact_desc": "¿Tienes alguna pregunta? Nos encantaría ayudarte",
+        "default_title": "Solicita tu análisis gratuito",
+        "default_desc": "Cuéntanos sobre tu empresa y te ayudaremos a identificar oportunidades de automatización",
+        "cta_title": "¡Automatiza tu empresa hoy!",
+        "cta_desc": "Descubre cuánto tiempo y dinero puedes ahorrar con nuestros agentes de IA personalizados"
+    },
+    "ContactModal": {
+        "title": "Solicita tu análisis gratuito",
+        "description": "Cuéntanos sobre tu empresa y te ayudaremos a identificar oportunidades de automatización",
+        "success_title": "¡Solicitud recibida!",
+        "success_message": "Tu camino hacia la <bold>automatización</bold> ha comenzado. Nuestro equipo analizará tu caso y te contactará en menos de 24h.",
+        "preparing_analysis": "Preparando tu análisis estratégico...",
+        "header_title": "Solicita tu análisis gratuito",
+        "header_description": "Libera el potencial de tu empresa con <highlight>Agentes de IA</highlight> de próxima generación.",
+        "form": {
+            "name": {
+                "label": "Nombre completo",
+                "placeholder": "Tu nombre"
+            },
+            "email": {
+                "label": "Email corporativo",
+                "placeholder": "tu@empresa.com"
+            },
+            "company": {
+                "label": "Empresa",
+                "placeholder": "Nombre legal"
+            },
+            "role": {
+                "label": "Cargo",
+                "placeholder": "Ej: Director"
+            },
+            "employees": {
+                "label": "Tamaño de la empresa",
+                "placeholder": "Seleccionar volumen de empleados",
+                "options": {
+                    "1-10": "1-10 empleados",
+                    "11-50": "11-50 empleados",
+                    "51-200": "51-200 empleados",
+                    "201-500": "201-500 empleados",
+                    "500+": "Más de 500 empleados"
+                }
+            },
+            "processes": {
+                "label": "¿Qué deseas automatizar?",
+                "placeholder": "Explica qué tareas críticas te gustaría que gestionara un Agente de IA..."
+            },
+            "submit": {
+                "processing": "Procesando...",
+                "send": "Enviar solicitud"
+            },
+            "close": "Cerrar"
+        },
+        "errors": {
+            "send_error": "Error al enviar: ",
+            "unexpected_error": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo."
+        }
+    },
+    "JsonLd": {
+        "name": "Agentika",
+        "description": "Empresa especializada en automatización empresarial con agentes de inteligencia artificial personalizados",
+        "contact_point": {
+            "contact_type": "customer service",
+            "available_language": "Spanish"
+        },
+        "offers": {
+            "name": "Análisis de Automatización Gratuito",
+            "description": "Análisis completo y personalizado de procesos empresariales para identificar oportunidades de automatización"
+        },
+        "service": {
+            "name": "Automatización Empresarial con IA",
+            "description": "Desarrollo de agentes de inteligencia artificial personalizados para automatizar procesos repetitivos empresariales",
+            "catalog": {
+                "name": "Servicios de Automatización",
+                "items": {
+                    "0": "Seguimiento Automático de Leads",
+                    "1": "Envío de Emails Personalizados",
+                    "2": "Integración entre Herramientas",
+                    "3": "Creación Automática de Informes"
+                }
+            }
+        }
+    }
+}

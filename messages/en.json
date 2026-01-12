@@ -1,0 +1,283 @@
+{
+    "Index": {
+        "title": "Welcome"
+    },
+    "Metadata": {
+        "title": "Agentika - AI Business Automation | Save up to 95% Time",
+        "description": "Automate repetitive processes with custom AI agents. Free analysis, pay only if you implement. Save up to 95% of time.",
+        "keywords": "business automation, AI agents, artificial intelligence, process automation, time saving, business productivity, custom AI, task automation, intelligent agents, process optimization, business efficiency, automation Spain, AI for business, process robots, workflow automation"
+    },
+    "Header": {
+        "nav": {
+            "home": "Home",
+            "how_it_works": "How it works",
+            "cases": "Cases",
+            "pricing": "Pricing",
+            "faq": "FAQ",
+            "contact": "Contact"
+        },
+        "cta": "Get a free analysis"
+    },
+    "Hero": {
+        "badge": "🚀 Business Automation with AI",
+        "title_prefix": "Up to",
+        "title_highlight": "95% less time",
+        "title_suffix": "performing repetitive tasks",
+        "description": "We analyze your business processes and create AI agents that automate repetitive tasks so you save up to 95% of time in daily operations.",
+        "cta_primary": "Start for free",
+        "cta_secondary": "View success stories",
+        "check_1": "100% free analysis",
+        "check_2": "Pay only if you implement"
+    },
+    "HowItWorks": {
+        "title": "How our process works",
+        "description": "A simple and transparent process, designed to maximize your results",
+        "steps": {
+            "0": {
+                "step": "01",
+                "title": "Fill out the form",
+                "description": "Tell us which repetitive tasks consume the most time in your company"
+            },
+            "1": {
+                "step": "02",
+                "title": "Manual analysis",
+                "description": "Our team analyzes your specific case in a personalized way"
+            },
+            "2": {
+                "step": "03",
+                "title": "Tailored proposal",
+                "description": "We present AI agents designed specifically for your processes"
+            },
+            "3": {
+                "step": "04",
+                "title": "Implementation",
+                "description": "You only pay if you decide to implement any of our solutions"
+            }
+        }
+    },
+    "Benefits": {
+        "title": "Why choose Agentika?",
+        "description": "Real benefits that transform the way you work",
+        "items": {
+            "0": {
+                "title": "Save up to 95% of time",
+                "description": "Free your team from repetitive tasks so they can focus on what matters"
+            },
+            "1": {
+                "title": "Works 24/7",
+                "description": "Our agents automate processes tirelessly, even at night"
+            },
+            "2": {
+                "title": "Zero human errors",
+                "description": "Eliminate errors and ensure consistency in all your processes"
+            },
+            "3": {
+                "title": "No technical knowledge required",
+                "description": "We take care of everything, you just enjoy the results"
+            },
+            "4": {
+                "title": "Real human support",
+                "description": "Our team accompanies you at every moment of the process"
+            },
+            "5": {
+                "title": "Grows with you",
+                "description": "Automation adapts and scales according to your company's needs"
+            }
+        }
+    },
+    "Cases": {
+        "title": "Business automation cases with AI agents",
+        "description": "Real examples of how companies implement automation with our AI agents",
+        "items": {
+            "0": {
+                "title": "Lead follow-up automation",
+                "description": "AI agents for personalized nurturing automation and constant follow-up"
+            },
+            "1": {
+                "title": "Business email automation",
+                "description": "AI agents that automate personalized communication adapted to each client"
+            },
+            "2": {
+                "title": "Integration automation",
+                "description": "AI agents for business automation between CRM, ERP, and other platforms"
+            },
+            "3": {
+                "title": "Report automation",
+                "description": "AI agents that automate the creation of detailed business reports"
+            }
+        }
+    },
+    "Security": {
+        "title": "Security in business automation",
+        "description": "Our AI agents guarantee maximum security and transparency",
+        "items": {
+            "0": {
+                "title": "Business data protection",
+                "description": "Business automation with AI agents that comply with security best practices"
+            },
+            "1": {
+                "title": "Automation without commitments",
+                "description": "You can deactivate any business automation AI agent whenever you want"
+            },
+            "2": {
+                "title": "Specialized AI support",
+                "description": "Specialized human attention in business automation with AI agents"
+            }
+        }
+    },
+    "Pricing": {
+        "title": "Business automation pricing",
+        "description": "Free analysis of AI agents, no surprises or fine print",
+        "card": {
+            "title": "Free business automation analysis",
+            "description": "You only pay if you implement AI agents for your business automation",
+            "features": [
+                "Complete business automation analysis - FREE",
+                "Personalized AI agent proposal - FREE",
+                "Initial automation consulting - FREE",
+                "Pay only if you decide to implement AI agents",
+                "Every business automation is unique and personalized",
+                "Continuous support for AI agents included"
+            ],
+            "cta": "Request free automation analysis",
+            "note": "* Schedule a call to know your personalized business automation budget"
+        }
+    },
+    "FAQ": {
+        "title": "Questions about AI business automation",
+        "description": "We resolve common doubts about AI agents and business automation",
+        "items": {
+            "0": {
+                "question": "What is an AI agent for business automation?",
+                "answer": "An AI agent is an intelligent program that automates specific tasks autonomously. At Agentika, we create custom AI agents for business automation that integrate with your existing tools to automate repetitive processes like email sending, lead follow-up, report generation, etc."
+            },
+            "1": {
+                "question": "What business processes can be automated with AI agents?",
+                "answer": "We can automate virtually any repetitive business process: customer follow-up, personalized email sending, report creation, system integration, data processing, inventory management, and much more. During the free business automation analysis, we identify the best opportunities to implement AI agents in your specific case."
+            },
+            "2": {
+                "question": "How long does business automation analysis take?",
+                "answer": "The initial business automation analysis takes between 3-5 business days. First you complete a detailed form about your business processes, then our team analyzes your case manually and presents a personalized proposal with recommended AI agents and estimated automation benefits."
+            },
+            "3": {
+                "question": "What if I don't want to pay for business automation?",
+                "answer": "Perfect! The business automation analysis is completely free and without commitment. You will receive a detailed report with recommendations on AI agents that you can implement on your own if you wish. We only charge if you decide that we implement any of the proposed AI agents for your business automation."
+            },
+            "4": {
+                "question": "Can I deactivate AI agents whenever I want?",
+                "answer": "Absolutely. There are no permanencies or long-term contracts for business automation. You can pause or deactivate any AI agent at any time. Our goal is for you to get real value from business automation, not to retain you by obligation."
+            }
+        }
+    },
+    "Footer": {
+        "subtitle": "Business automation with custom AI agents",
+        "company": {
+            "title": "Company",
+            "about": "About us",
+            "cases": "Automation cases",
+            "blog": "AI Agent Blog",
+            "careers": "Careers"
+        },
+        "legal": {
+            "title": "Legal",
+            "terms": "Terms of Service",
+            "privacy": "Privacy Policy",
+            "cookies": "Cookies"
+        },
+        "contact": {
+            "title": "Contact",
+            "address": "Elche, Spain"
+        },
+        "rights": "© 2025 Agentika. All rights reserved."
+    },
+    "CTA": {
+        "title": "Request your free business automation analysis with AI agents",
+        "description": "Thousands of hours recovered with business automation, zero errors, maximum efficiency. It all starts with a conversation about AI agents.",
+        "button": "I want business automation with AI agents",
+        "note": "⚡ Fast answers • 🎯 100% personalized automation analysis • 💰 No initial cost"
+    },
+    "Modal": {
+        "contact_title": "Contact us",
+        "contact_desc": "Do you have any questions? We'd love to help you",
+        "default_title": "Request your free analysis",
+        "default_desc": "Tell us about your company and we will help you identify automation opportunities",
+        "cta_title": "Automate your company today!",
+        "cta_desc": "Discover how much time and money you can save with our custom AI agents"
+    },
+    "ContactModal": {
+        "title": "Request your free analysis",
+        "description": "Tell us about your company and we will help you identify automation opportunities",
+        "success_title": "Request received!",
+        "success_message": "Your path to <bold>automation</bold> has begun. Our team will analyze your case and contact you in less than 24h.",
+        "preparing_analysis": "Preparing your strategic analysis...",
+        "header_title": "Request your free analysis",
+        "header_description": "Unlock your company's potential with next-generation <highlight>AI Agents</highlight>.",
+        "form": {
+            "name": {
+                "label": "Full Name",
+                "placeholder": "Your name"
+            },
+            "email": {
+                "label": "Corporate Email",
+                "placeholder": "you@company.com"
+            },
+            "company": {
+                "label": "Company",
+                "placeholder": "Legal name"
+            },
+            "role": {
+                "label": "Role",
+                "placeholder": "Ex: Director"
+            },
+            "employees": {
+                "label": "Company Size",
+                "placeholder": "Select employee volume",
+                "options": {
+                    "1-10": "1-10 employees",
+                    "11-50": "11-50 employees",
+                    "51-200": "51-200 employees",
+                    "201-500": "201-500 employees",
+                    "500+": "More than 500 employees"
+                }
+            },
+            "processes": {
+                "label": "What do you want to automate?",
+                "placeholder": "Explain what critical tasks you would like an AI Agent to manage..."
+            },
+            "submit": {
+                "processing": "Processing...",
+                "send": "Send Request"
+            },
+            "close": "Close"
+        },
+        "errors": {
+            "send_error": "Error sending: ",
+            "unexpected_error": "An unexpected error occurred. Please try again."
+        }
+    },
+    "JsonLd": {
+        "name": "Agentika",
+        "description": "Company specialized in business automation with custom artificial intelligence agents",
+        "contact_point": {
+            "contact_type": "customer service",
+            "available_language": "English"
+        },
+        "offers": {
+            "name": "Free Automation Analysis",
+            "description": "Complete and personalized analysis of business processes to identify automation opportunities"
+        },
+        "service": {
+            "name": "Business Automation with AI",
+            "description": "Development of custom artificial intelligence agents to automate repetitive business processes",
+            "catalog": {
+                "name": "Automation Services",
+                "items": {
+                    "0": "Automatic Lead Follow-up",
+                    "1": "Personalized Email Sending",
+                    "2": "Tool Integration",
+                    "3": "Automatic Report Creation"
+                }
+            }
+        }
+    }
+}

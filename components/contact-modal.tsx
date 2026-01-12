@@ -12,6 +12,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Send, CheckCircle, Sparkles, X } from "lucide-react"
 import { sendContactEmail } from "@/app/actions"
 import { toast } from "sonner"
+import { useTranslations } from "next-intl"
 
 
 interface ContactModalProps {
@@ -24,9 +25,10 @@ interface ContactModalProps {
 export function ContactModal({
   isOpen,
   onClose,
-  title = "Solicita tu análisis gratuito",
-  description = "Cuéntanos sobre tu empresa y te ayudaremos a identificar oportunidades de automatización",
+  title, // Optional override, otherwise uses default from translations
+  description, // Optional override
 }: ContactModalProps) {
+  const t = useTranslations("ContactModal")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [formData, setFormData] = useState({
@@ -38,6 +40,10 @@ export function ContactModal({
     processes: "",
     message: "",
   })
+
+  // Defaults if not provided
+  const displayTitle = title || t("header_title")
+  const displayDescription = description || t("header_description")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -66,11 +72,11 @@ export function ContactModal({
         }, 3000)
       } else {
         setIsSubmitting(false)
-        toast.error("Error al enviar: " + result.error)
+        toast.error(t("errors.send_error") + result.error)
       }
     } catch (error) {
       setIsSubmitting(false)
-      toast.error("Ocurrió un error inesperado. Por favor, inténtalo de nuevo.")
+      toast.error(t("errors.unexpected_error"))
       console.error(error)
     }
   }
@@ -89,15 +95,16 @@ export function ContactModal({
               <CheckCircle className="w-12 h-12 text-white animate-in zoom-in duration-500" />
             </div>
             <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 mb-3">
-              ¡Solicitud recibida!
+              {t("success_title")}
             </h3>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-              Tu camino hacia la <span className="font-semibold text-blue-600">automatización</span> ha comenzado.
-              Nuestro equipo analizará tu caso y te contactará en menos de 24h.
+              {t.rich("success_message", {
+                bold: (chunks) => <span className="font-semibold text-blue-600">{chunks}</span>
+              })}
             </p>
             <div className="flex items-center justify-center gap-2 text-sm font-medium text-slate-400">
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Preparando tu análisis estratégico...</span>
+              <span>{t("preparing_analysis")}</span>
             </div>
           </div>
         </DialogContent>
@@ -116,10 +123,12 @@ export function ContactModal({
             </div>
             <div>
               <DialogTitle className="text-2xl font-black tracking-tight leading-tight mb-1.5 text-white">
-                {title}
+                {displayTitle}
               </DialogTitle>
               <DialogDescription className="text-blue-50/90 text-sm leading-relaxed max-w-sm font-medium">
-                Libera el potencial de tu empresa con <span className="text-cyan-200 font-extrabold underline decoration-cyan-400/30 underline-offset-4">Agentes de IA</span> de próxima generación.
+                {t.rich("header_description", {
+                  highlight: (chunks) => <span className="text-cyan-200 font-extrabold underline decoration-cyan-400/30 underline-offset-4">{chunks}</span>
+                })}
               </DialogDescription>
             </div>
           </div>
@@ -134,27 +143,27 @@ export function ContactModal({
             <div className="grid grid-cols-2 gap-5">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Nombre completo
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.name.label")}
                 </Label>
                 <Input
                   id="name"
                   value={formData.name}
                   onChange={(e) => handleChange("name", e.target.value)}
-                  placeholder="Tu nombre"
+                  placeholder={t("form.name.placeholder")}
                   required
                   className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Email corporativo
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.email.label")}
                 </Label>
                 <Input
                   id="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleChange("email", e.target.value)}
-                  placeholder="tu@empresa.com"
+                  placeholder={t("form.email.placeholder")}
                   required
                   className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
                 />
@@ -164,26 +173,26 @@ export function ContactModal({
             <div className="grid grid-cols-2 gap-5">
               <div className="space-y-2">
                 <Label htmlFor="company" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> Empresa
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.company.label")}
                 </Label>
                 <Input
                   id="company"
                   value={formData.company}
                   onChange={(e) => handleChange("company", e.target.value)}
-                  placeholder="Nombre legal"
+                  placeholder={t("form.company.placeholder")}
                   required
                   className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="role" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2 opacity-70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> Cargo
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> {t("form.role.label")}
                 </Label>
                 <Input
                   id="role"
                   value={formData.role}
                   onChange={(e) => handleChange("role", e.target.value)}
-                  placeholder="Ej: Director"
+                  placeholder={t("form.role.placeholder")}
                   className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white"
                 />
               </div>
@@ -191,31 +200,31 @@ export function ContactModal({
 
             <div className="space-y-2">
               <Label htmlFor="employees" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2 opacity-70">
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> Tamaño de la empresa
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-400" /> {t("form.employees.label")}
               </Label>
               <Select value={formData.employees} onValueChange={(value) => handleChange("employees", value)}>
                 <SelectTrigger className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 h-11 text-sm px-4 rounded-2xl transition-all shadow-sm focus:bg-white">
-                  <SelectValue placeholder="Seleccionar volumen de empleados" />
+                  <SelectValue placeholder={t("form.employees.placeholder")} />
                 </SelectTrigger>
                 <SelectContent className="rounded-2xl border-slate-100 shadow-2xl p-1">
-                  <SelectItem value="1-10" className="rounded-xl">1-10 empleados</SelectItem>
-                  <SelectItem value="11-50" className="rounded-xl">11-50 empleados</SelectItem>
-                  <SelectItem value="51-200" className="rounded-xl">51-200 empleados</SelectItem>
-                  <SelectItem value="201-500" className="rounded-xl">201-500 empleados</SelectItem>
-                  <SelectItem value="500+" className="rounded-xl">Más de 500 empleados</SelectItem>
+                  <SelectItem value="1-10" className="rounded-xl">{t("form.employees.options.1-10")}</SelectItem>
+                  <SelectItem value="11-50" className="rounded-xl">{t("form.employees.options.11-50")}</SelectItem>
+                  <SelectItem value="51-200" className="rounded-xl">{t("form.employees.options.51-200")}</SelectItem>
+                  <SelectItem value="201-500" className="rounded-xl">{t("form.employees.options.201-500")}</SelectItem>
+                  <SelectItem value="500+" className="rounded-xl">{t("form.employees.options.500+")}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
             <div className="space-y-2">
               <Label htmlFor="processes" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> ¿Qué deseas automatizar?
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.processes.label")}
               </Label>
               <Textarea
                 id="processes"
                 value={formData.processes}
                 onChange={(e) => handleChange("processes", e.target.value)}
-                placeholder="Explica qué tareas críticas te gustaría que gestionara un Agente de IA..."
+                placeholder={t("form.processes.placeholder")}
                 rows={2}
                 required
                 className="bg-slate-50/50 border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 text-sm px-4 py-3 rounded-2xl transition-all shadow-sm focus:bg-white resize-none min-h-[80px]"
@@ -231,12 +240,12 @@ export function ContactModal({
                 {isSubmitting ? (
                   <div className="flex items-center gap-3">
                     <div className="w-5 h-5 border-3 border-white/30 border-t-white rounded-full animate-spin" />
-                    Procesando...
+                    {t("form.submit.processing")}
                   </div>
                 ) : (
                   <div className="flex items-center gap-3">
                     <Send className="w-5 h-5 shadow-sm" />
-                    Enviar solicitud
+                    {t("form.submit.send")}
                   </div>
                 )}
               </Button>
@@ -246,7 +255,7 @@ export function ContactModal({
                 onClick={onClose}
                 className="flex-[1] h-14 text-sm font-bold border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-2xl transition-all"
               >
-                Cerrar
+                {t("form.close")}
               </Button>
             </div>
           </form>
