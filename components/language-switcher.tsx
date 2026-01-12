@@ -33,12 +33,14 @@ export function LanguageSwitcher() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => onSelectChange("es")}>
-                    <span className={locale === "es" ? "font-bold text-blue-600" : ""}>Español</span>
+                <DropdownMenuItem onClick={() => onSelectChange("es")} className="cursor-pointer">
+                    <span className="mr-2 text-base">🇪🇸</span>
+                    <span className={locale === "es" ? "font-bold text-blue-600 flex-1" : "flex-1"}>Español</span>
                     {locale === "es" && <Check className="ml-2 h-4 w-4 text-blue-600" />}
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => onSelectChange("en")}>
-                    <span className={locale === "en" ? "font-bold text-blue-600" : ""}>English</span>
+                <DropdownMenuItem onClick={() => onSelectChange("en")} className="cursor-pointer">
+                    <span className="mr-2 text-base">🇺🇸</span>
+                    <span className={locale === "en" ? "font-bold text-blue-600 flex-1" : "flex-1"}>English</span>
                     {locale === "en" && <Check className="ml-2 h-4 w-4 text-blue-600" />}
                 </DropdownMenuItem>
             </DropdownMenuContent>
