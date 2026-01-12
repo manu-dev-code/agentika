@@ -164,9 +164,9 @@ export default function AgentikaLandingClient() {
                 <Badge variant="secondary" className="bg-blue-100 text-blue-700 border-blue-200 text-xs sm:text-sm">
                   {tHero("badge")}
                 </Badge>
-                <h1 id="hero-title" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-800 leading-tight">
+                <h1 id="hero-title" className="text-2xl sm:text-4xl lg:text-6xl font-bold text-slate-800 leading-[1.15]">
                   {tHero("title_prefix")}{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600 whitespace-nowrap">
                     {tHero("title_highlight")}
                   </span>{" "}
                   {tHero("title_suffix")}
@@ -259,7 +259,9 @@ export default function AgentikaLandingClient() {
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <div className="text-sm font-bold text-slate-400 mb-2">PASO {step.step}</div>
+                    <div className="text-sm font-bold text-slate-400 mb-2">
+                      {tHow("step_label")} {step.step}
+                    </div>
                     <CardTitle className={`text-xl text-slate-800 ${index === 0 ? "group-hover:text-blue-600 transition-colors" : ""}`}>
                       {step.title}
                       {index === 0 && (
@@ -268,7 +270,14 @@ export default function AgentikaLandingClient() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-600 text-center">{step.description}</p>
+                    <p className="text-slate-600 text-center">
+                      {step.description}
+                      {index === 0 && (
+                        <span className="block mt-4 text-blue-600 font-semibold group-hover:underline transition-all">
+                          {tHow("cta_step_0")} →
+                        </span>
+                      )}
+                    </p>
                   </CardContent>
                 </Card>
               )
@@ -422,10 +431,10 @@ export default function AgentikaLandingClient() {
                 <Button
                   size="lg"
                   onClick={() => openModal()}
-                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg"
+                  className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-base sm:text-lg h-auto py-4 px-4 whitespace-normal"
                 >
-                  {tPricing("card.cta")}
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <span className="flex-1">{tPricing("card.cta")}</span>
+                  <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
                 </Button>
                 <p className="text-center text-sm text-slate-500 mt-4">
                   {tPricing("card.note")}
@@ -483,10 +492,10 @@ export default function AgentikaLandingClient() {
                   tModal("cta_desc")
                 )
               }
-              className="bg-white text-blue-600 hover:bg-slate-100 text-lg px-12 py-4"
+              className="bg-white text-blue-600 hover:bg-slate-100 text-base sm:text-lg px-6 sm:px-12 py-6 sm:py-4 h-auto w-full max-w-md mx-auto whitespace-normal leading-snug"
             >
-              {tCTA("button")}
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <span className="flex-1">{tCTA("button")}</span>
+              <ArrowRight className="ml-2 w-5 h-5 shrink-0" />
             </Button>
             <p className="text-sm opacity-75">
               {tCTA("note")}

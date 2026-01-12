@@ -140,7 +140,7 @@ export function ContactModal({
 
         <div className="p-8 overflow-y-auto">
           <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.name.label")}
@@ -170,7 +170,7 @@ export function ContactModal({
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="space-y-2">
                 <Label htmlFor="company" className="text-slate-900 font-bold text-[11px] uppercase tracking-widest ml-1 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-600 shadow-[0_0_8px_rgba(37,99,235,0.5)]" /> {t("form.company.label")}
@@ -231,21 +231,21 @@ export function ContactModal({
               />
             </div>
 
-            <div className="flex gap-4 pt-3">
+            <div className="flex flex-col sm:flex-row gap-4 pt-3">
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-[3] h-14 text-base font-black bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 hover:shadow-[0_10px_40px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl text-white tracking-widest"
+                className="w-full sm:flex-[3] h-14 text-base font-black bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-500 hover:shadow-[0_10px_40px_rgba(37,99,235,0.4)] hover:scale-[1.02] active:scale-[0.98] transition-all rounded-2xl text-white tracking-widest px-4 whitespace-normal"
               >
                 {isSubmitting ? (
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center gap-3">
                     <div className="w-5 h-5 border-3 border-white/30 border-t-white rounded-full animate-spin" />
-                    {t("form.submit.processing")}
+                    <span className="text-sm sm:text-base">{t("form.submit.processing")}</span>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center gap-3">
                     <Send className="w-5 h-5 shadow-sm" />
-                    {t("form.submit.send")}
+                    <span className="text-sm sm:text-base uppercase">{t("form.submit.send")}</span>
                   </div>
                 )}
               </Button>
@@ -253,7 +253,7 @@ export function ContactModal({
                 type="button"
                 variant="outline"
                 onClick={onClose}
-                className="flex-[1] h-14 text-sm font-bold border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-2xl transition-all"
+                className="w-full sm:flex-[1] h-14 text-sm font-bold border-slate-200 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-2xl transition-all"
               >
                 {t("form.close")}
               </Button>
