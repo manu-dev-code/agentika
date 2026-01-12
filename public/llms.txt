@@ -1,0 +1,25 @@
+# Agentika - Automatización Empresarial con IA
+
+Agentika es una empresa especializada en el desarrollo de agentes de inteligencia artificial personalizados para optimizar procesos de negocio.
+
+## Core Services
+- Seguimiento Automático de Leads
+- Envío de Emails Personalizados
+- Integración entre Herramientas
+- Creación Automática de Informes
+
+## Key Features
+- Análisis de automatización gratuito.
+- Agentes de IA que trabajan 24/7.
+- Implementación rápida y sin fricción.
+- Seguridad y privacidad de datos de nivel empresarial.
+
+## Target Audience
+Empresas que buscan escalar su eficiencia operativa eliminando tareas repetitivas mediante el uso de inteligencia artificial.
+
+## Links
+- [Homepage (Spanish)](https://agentika.es/es)
+- [Homepage (English)](https://agentika.es/en)
+- [Casos de Uso](https://agentika.es/es#casos)
+- [Precios](https://agentika.es/es#precios)
+- [Preguntas Frecuentes](https://agentika.es/es#faq)
