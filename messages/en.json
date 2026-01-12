@@ -32,6 +32,8 @@
     "HowItWorks": {
         "title": "How our process works",
         "description": "A simple and transparent process, designed to maximize your results",
+        "step_label": "STEP",
+        "cta_step_0": "Fill out form",
         "steps": {
             "0": {
                 "step": "01",

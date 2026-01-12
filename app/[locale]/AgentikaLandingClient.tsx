@@ -249,7 +249,9 @@ export default function AgentikaLandingClient() {
               return (
                 <Card
                   key={index}
-                  className="relative border-0 shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className={`relative border-0 shadow-lg hover:shadow-xl transition-all duration-300 group ${index === 0 ? "cursor-pointer hover:ring-2 hover:ring-blue-500/20" : ""
+                    }`}
+                  onClick={index === 0 ? () => openModal() : undefined}
                 >
                   <CardHeader className="text-center pb-4">
                     <div
@@ -258,7 +260,12 @@ export default function AgentikaLandingClient() {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-sm font-bold text-slate-400 mb-2">PASO {step.step}</div>
-                    <CardTitle className="text-xl text-slate-800">{step.title}</CardTitle>
+                    <CardTitle className={`text-xl text-slate-800 ${index === 0 ? "group-hover:text-blue-600 transition-colors" : ""}`}>
+                      {step.title}
+                      {index === 0 && (
+                        <ArrowRight className="inline-block ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                      )}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 text-center">{step.description}</p>
