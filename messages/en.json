@@ -210,7 +210,7 @@
         "title": "Request your free analysis",
         "description": "Tell us about your company and we will help you identify automation opportunities",
         "success_title": "Request received!",
-        "success_message": "Your path to <bold>automation</bold> has begun. Our team will analyze your case and contact you in less than 24h.",
+        "success_message": "Your path to <bold>automation</bold> has begun. Our team will analyze your case and contact you.",
         "preparing_analysis": "Preparing your strategic analysis...",
         "header_title": "Request your free analysis",
         "header_description": "Unlock your company's potential with next-generation <highlight>AI Agents</highlight>.",
