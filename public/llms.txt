@@ -1,25 +1,32 @@
-# Agentika - Automatización Empresarial con IA
+# Agentika - Automatización de Negocios con IA
 
-Agentika es una empresa especializada en el desarrollo de agentes de inteligencia artificial personalizados para optimizar procesos de negocio.
+Agentika se especializa en automatizar procesos empresariales repetitivos mediante agentes de IA personalizados. La plataforma ofrece un análisis manual gratuito de los procesos de la empresa y proporciona soluciones de automatización a medida, ayudando a las empresas a ahorrar hasta un 95% de su tiempo en tareas operativas.
 
-## Core Services
-- Seguimiento Automático de Leads
-- Envío de Emails Personalizados
-- Integración entre Herramientas
-- Creación Automática de Informes
+## Propuesta de Valor Principal
+- **Eficiencia**: Ahorra hasta un 95% de tiempo en tareas repetitivas.
+- **Personalización**: Los agentes se diseñan específicamente para los procesos únicos de cada cliente.
+- **Sin Riesgo**: Análisis inicial gratuito, pago solo por la implementación.
+- **Disponibilidad**: Automatización 24/7 sin errores humanos.
 
-## Key Features
-- Análisis de automatización gratuito.
-- Agentes de IA que trabajan 24/7.
-- Implementación rápida y sin fricción.
-- Seguridad y privacidad de datos de nivel empresarial.
+## Estructura del Proyecto
+- `/app`: Rutas y lógica de Next.js App Router.
+- `/components`: Componentes de UI reutilizables.
+- `/messages`: Archivos de localización (en.json, es.json).
+- `/lib`: Funciones de utilidad y lógica compartida.
+- `/public`: Activos estáticos (imágenes, iconos, etc.).
+- `/styles`: CSS global y configuración de Tailwind.
 
-## Target Audience
-Empresas que buscan escalar su eficiencia operativa eliminando tareas repetitivas mediante el uso de inteligencia artificial.
+## Funcionalidades Clave
+- **Seguimiento de Leads**: Automatización de nurturing y seguimiento constante.
+- **Automatización de Email**: Comunicación personalizada adaptada a cada cliente.
+- **Integración**: Conexión entre CRM, ERP y otras plataformas.
+- **Generación de Informes**: Creación automática de informes detallados de negocio.
+
+## Audiencia Objetivo
+Empresas de todos los tamaños que buscan reducir la carga operativa mediante automatización inteligente.
 
 ## Links
 - [Homepage (Spanish)](https://agentika.es/es)
 - [Homepage (English)](https://agentika.es/en)
 - [Casos de Uso](https://agentika.es/es#casos)
-- [Precios](https://agentika.es/es#precios)
 - [Preguntas Frecuentes](https://agentika.es/es#faq)
