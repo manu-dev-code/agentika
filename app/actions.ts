@@ -5,23 +5,23 @@ import { Resend } from "resend"
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function sendContactEmail(formData: {
-    name: string
-    email: string
-    company: string
-    role?: string
-    employees?: string
-    processes: string
-    message?: string
+  name: string
+  email: string
+  company: string
+  role?: string
+  employees?: string
+  processes: string
+  message?: string
 }) {
-    try {
-        const { name, email, company, role, employees, processes, message } = formData
+  try {
+    const { name, email, company, role, employees, processes, message } = formData
 
-        const { data, error } = await resend.emails.send({
-            from: "Agentika <notificaciones@agentika.es>",
-            to: [process.env.CONTACT_EMAIL_RECIPIENT || "hola@agentika.es"],
-            subject: `Nuevo Lead: ${name} de ${company}`,
-            replyTo: email,
-            html: `
+    const { data, error } = await resend.emails.send({
+      from: "Agentika <noreply@agentika.es>",
+      to: [process.env.CONTACT_EMAIL_RECIPIENT || "hola@agentika.es"],
+      subject: `Nuevo Lead: ${name} de ${company}`,
+      replyTo: email,
+      html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden;">
           <div style="background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%); padding: 30px; text-align: center;">
             <h1 style="color: white; margin: 0; font-size: 24px; letter-spacing: -0.025em;">Agentika Leads</h1>
@@ -59,28 +59,28 @@ export async function sendContactEmail(formData: {
             </div>
 
             ${message
-                    ? `
+          ? `
               <h2 style="color: #111827; font-size: 18px; margin: 30px 0 15px; border-bottom: 2px solid #f3f4f6; padding-bottom: 10px;">💬 Mensaje Adicional</h2>
               <p style="color: #475569; line-height: 1.6;">${message.replace(/\n/g, "<br>")}</p>
             `
-                    : ""
-                }
+          : ""
+        }
           </div>
           <div style="background-color: #f9fafb; padding: 20px; text-align: center; border-top: 1px solid #e5e7eb;">
             <p style="color: #9ca3af; font-size: 12px; margin: 0;">© ${new Date().getFullYear()} Agentika AI - Sistema de Gestión de Leads</p>
           </div>
         </div>
       `,
-        })
+    })
 
-        if (error) {
-            console.error("Error enviando email:", error)
-            return { success: false, error: error.message }
-        }
-
-        return { success: true, data }
-    } catch (error) {
-        console.error("Error inesperado:", error)
-        return { success: false, error: "Ocurrió un error inesperado al enviar el formulario." }
+    if (error) {
+      console.error("Error enviando email:", error)
+      return { success: false, error: error.message }
     }
+
+    return { success: true, data }
+  } catch (error) {
+    console.error("Error inesperado:", error)
+    return { success: false, error: "Ocurrió un error inesperado al enviar el formulario." }
+  }
 }
